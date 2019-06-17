@@ -1,26 +1,43 @@
 package com.kodilla.testing.collection;
-import org.junit.Test;
 
+import com.kodilla.testing.collection.OddNumbersExterminator;
+import org.junit.Assert;
+import org.junit.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionTestSuite {
 
+
+    @Before
+    public void before(){
+        System.out.println("Test: begin");
+    }
+    @After
+    public void after(){
+        System.out.println("Test: end");
+    }
     @Test
     public void testOddNumbersExterminatorNormalList() {
-        // step 1 - create array list with sample data
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
+        List<Integer> data = new ArrayList<>();
+        data.add(1);
+        data.add(2);
+        data.add(3);
 
-        //step 2 - call method exterminate and assign result to collection List<Integer> result
-        ArrayList<Integer> result = numbers.exterminate();
+        OddNumberExterminator exterminator = new OddNumberExterminator();
+        List<Integer> result = exterminator.exterminate(data);
 
-
-        //step 3 - check if result collection contains only even numbers - use assertion's
+        Assert.assertEquals(result.size(), 2);
     }
 
+    public void testOddNumbersExterminatorEmptyList() {
+        List<Integer> data = new ArrayList<>();
 
+
+        OddNumberExterminator exterminator2 = new OddNumberExterminator();
+        List<Integer> result2 = exterminator2.exterminate(data);
+
+        Assert.assertEquals(result2.size(), 2);
+    }
 }
 
