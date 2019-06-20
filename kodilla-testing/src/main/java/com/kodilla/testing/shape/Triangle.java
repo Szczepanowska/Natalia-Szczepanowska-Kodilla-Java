@@ -2,9 +2,9 @@ package com.kodilla.testing.shape;
 
 public class Triangle implements Shape {
 
-    String name;
-    Double a;
-    Double h;
+   private String name;
+   private Double a;
+   private Double h;
 
     public Triangle (String name, Double a, Double h){
         this.name = name;
