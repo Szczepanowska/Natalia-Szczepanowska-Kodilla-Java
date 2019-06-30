@@ -3,20 +3,18 @@ package com.kodilla.testing.shape;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ShapeCollectorTestSuite {
 
-    private List <Shape> shapes = new ArrayList<>();
+
 
     @Test
     public void testAddFigure(){
 
          Shape s1 = new Circle("o", 2.0);
+
          ShapeCollector collector = new ShapeCollector();
 
-        collector.addFigure(s1);
+         collector.addFigure(s1);
 
         Assert.assertEquals(s1, collector.getFigure(0));
     }
@@ -24,33 +22,41 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testRemoveFigure(){
 
+        Shape s1 = new Circle("o", 2.0);
 
         ShapeCollector collector = new ShapeCollector();
-        collector.removeFigure(shapes.get(0));
+
+        boolean result = collector.removeFigure(s1);
+
+        Assert.assertTrue(result);
+        Assert.assertEquals(0, collector.showFigures());
 
 
-        Assert.assertEquals(2, shapes.size());
 
     }
 
     @Test
     public void testGetFigure(){
 
+        Shape s1 = new Circle("o", 2.0);
+
         ShapeCollector collector = new ShapeCollector();
 
-        collector.getFigure(0);
 
-        Shape result = shapes.get(0);
-        Assert.assertEquals(result, shapes.get(0));
+        Assert.assertEquals(collector.getFigure(0), s1);
 
 
     }
 
     @Test
-    public void showFigures() {
+    public void showFigures(){
+
+        Shape s1 = new Circle("o", 2.0);
+        Shape s2 = new Triangle("t", 5.5, 5.5);
 
         ShapeCollector collector = new ShapeCollector();
         collector.showFigures();
+
 
 
 
