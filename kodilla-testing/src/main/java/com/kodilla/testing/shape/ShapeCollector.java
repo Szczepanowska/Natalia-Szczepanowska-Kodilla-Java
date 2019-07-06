@@ -22,7 +22,8 @@ private List <Shape> shapes = new ArrayList<>();
         return shapes.get(n);
     }
 
-    public List <Shape> showFigures(){
+    public List <Shape> showFigures()
+    {
     return shapes;
     }
 }
