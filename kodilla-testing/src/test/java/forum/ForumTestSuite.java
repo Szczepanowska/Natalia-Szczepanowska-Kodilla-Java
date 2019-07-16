@@ -1,4 +1,4 @@
-package com.kodilla.testing.forum;
+package forum;
 
 import org.junit.*;
 
