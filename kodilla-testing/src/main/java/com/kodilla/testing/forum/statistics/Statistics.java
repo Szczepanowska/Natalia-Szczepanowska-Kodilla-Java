@@ -1,5 +1,4 @@
-package com.kodilla.testing.statistics;
-
+package com.kodilla.testing.forum.statistics;
 import java.util.List;
 
 public interface Statistics {
