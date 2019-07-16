@@ -2,6 +2,10 @@ package com.kodilla.testing.shape;
 
 import org.junit.Assert;
 import org.junit.Test;
+import shape.Circle;
+import shape.Shape;
+import shape.ShapeCollector;
+import shape.Triangle;
 
 import java.util.List;
 
