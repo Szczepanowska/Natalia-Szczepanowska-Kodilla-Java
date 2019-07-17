@@ -1,0 +1,34 @@
+Test: begin
+Test: end
+Test: begin
+Test: end
+Number of users is: 100
+Number of posts is: 1000
+Number of comments is: 10
++Average number of posts per user is: 10.0
+-Average number of comments per user is: 0.1
+.Average number of comments per post is: 0.01
+Number of users is: 100
+Number of posts is: 1000
+Number of comments is: 0
++Average number of posts per user is: 10.0
+-Average number of comments per user is: 0.0
+-Average number of comments per post is: 0.0
+Number of users is: 0
+Number of posts is: 0
+Number of comments is: 0
+*Average number of posts per user is: 0.0
+-Average number of comments per user is: 0.0
+-Average number of comments per post is: 0.0
+Number of users is: 100
+Number of posts is: 1000
+Number of comments is: 5000
++Average number of posts per user is: 10.0
+.Average number of comments per user is: 50.0
+-Average number of comments per post is: 5.0
+	Number of users is: 100
+	Number of posts is: 0
+	Number of comments is: 0
+	*Average number of posts per user is: 0.0
+	-Average number of comments per user is: 0.0
+	-Average number of comments per post is: 0.0
