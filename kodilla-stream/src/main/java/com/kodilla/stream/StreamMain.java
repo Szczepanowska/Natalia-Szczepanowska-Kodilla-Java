@@ -12,7 +12,7 @@ public class StreamMain {
         Forum forum = new Forum();
         Map<Integer, ForumUser> theMap = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getSex() == 'M')
-                .filter(forumUser -> forumUser.getDateOfBirth() == LocalDate.now().minusYears(20) )
+                .filter(forumUser -> forumUser.getDateOfBirth().compareTo(LocalDate.now().minusYears(20)) <=0 )
                 .filter(forumUser -> forumUser.getNumberOfPosts() >= 1 )
                 .collect(Collectors.toMap(ForumUser::getId, forumUser -> forumUser));
                 theMap.entrySet().stream()
