@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.time.temporal.ChronoUnit.DAYS;
 import static java.util.stream.Collectors.toList;
 
 public class BoardTestSuite {
@@ -146,8 +147,8 @@ public class BoardTestSuite {
         long daysAmount = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(t -> (LocalDate.now().toEpochDay() - t.getCreated().toEpochDay()))
-                .reduce((long) 0, (sum, current) -> sum = sum + current );
+                .map(t -> DAYS.between(t.getCreated(), LocalDate.now()))
+                .mapToLong(t -> t).sum();
         long taskAmount = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
