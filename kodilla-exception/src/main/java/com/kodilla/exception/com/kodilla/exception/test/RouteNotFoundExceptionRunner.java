@@ -8,7 +8,7 @@ public class RouteNotFoundExceptionRunner {
         try {
             flightsScanner.findFilght(flight);
         } catch (RouteNotFoundException e) {
-            System.out.println("This airport does not exist in our map");
+            System.out.println( flight.getArrivalAirport() + " airport does not exist in our map");
         }
 
 

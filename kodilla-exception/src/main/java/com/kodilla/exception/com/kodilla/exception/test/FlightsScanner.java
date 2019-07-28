@@ -14,10 +14,10 @@ public class FlightsScanner {
         airports.put("KBP", true);
         airports.put("BUD", false);
 
-        if (!airports.containsKey(flight.getArrivalAirport())) {
+        if (!airports.containsKey(flight.getArrivalAirport()) || !airports.containsKey(flight.getDepartureAirport())) {
             throw new RouteNotFoundException();
         } else {
-            if (airports.get(flight.getArrivalAirport())) {
+            if (airports.get(flight.getArrivalAirport()) && airports.get(flight.getDepartureAirport())) {
                 System.out.println("Flight available");
             } else {
                 System.out.println("Flight unavailable");
