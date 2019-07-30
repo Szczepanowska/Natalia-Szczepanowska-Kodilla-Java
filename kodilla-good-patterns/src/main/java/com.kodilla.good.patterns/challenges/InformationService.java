@@ -1,8 +1,7 @@
 package com.kodilla.good.patterns.challenges;
 
 public interface InformationService {
-     boolean inform();
+     boolean inform(ProductOrder productOrder);
 
-
-    }
 }
+

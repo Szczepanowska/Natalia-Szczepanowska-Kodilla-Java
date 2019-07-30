@@ -12,11 +12,12 @@ public class OrderProcessor {
     }
 
     public OrderDto process(final OrderRequest orderRequest){
-        boolean isOrdered = orderService.order(orderRequest.getUser(), orderRequest.getProductOrder(), orderRequest.getDateOfOrder());
+        boolean isOrdered = orderRepository.create(orderRequest.getProductOrder(), orderRequest.getUser());
 
         if (isOrdered){
-            informationService.inform(orderRequest.getUser());
-            orderRepository.create(orderRequest.getUser(), orderRequest.getProductOrder(), orderRequest.getDateOfOrder());
+            informationService.inform(orderRequest.getProductOrder());
+            orderService.order(orderRequest.getUser(), orderRequest.getProductOrder());
+
             return new OrderDto(orderRequest.getUser(), orderRequest.getProductOrder(), true);
         } else {
             return new OrderDto(orderRequest.getUser(), orderRequest.getProductOrder(), false);

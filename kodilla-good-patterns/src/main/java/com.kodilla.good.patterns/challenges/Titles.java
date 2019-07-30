@@ -7,7 +7,7 @@ public class Titles {
         MovieStore movieStore = new MovieStore();
         String moviesTitles = movieStore.getMovies().entrySet().stream()
                 .flatMap(entry -> entry.getValue().stream())
-                .collect(Collectors.joining("!","",""));
+                .collect(Collectors.joining("!"));
 
         System.out.println(moviesTitles);
 
