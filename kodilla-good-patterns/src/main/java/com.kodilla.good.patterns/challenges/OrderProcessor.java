@@ -11,10 +11,10 @@ public class OrderProcessor {
         this.orderRepository = orderRepository;
     }
 
-    public OrderDto process(final OrderRequest orderRequest){
+    public OrderDto process(final OrderRequest orderRequest) {
         boolean isOrdered = orderRepository.create(orderRequest.getProductOrder(), orderRequest.getUser());
 
-        if (isOrdered){
+        if (isOrdered) {
             informationService.inform(orderRequest.getProductOrder());
             orderService.order(orderRequest.getUser(), orderRequest.getProductOrder());
 

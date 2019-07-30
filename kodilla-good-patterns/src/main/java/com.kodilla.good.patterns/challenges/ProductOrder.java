@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.challenges;
 
 public class ProductOrder {
     private int numberOfOrder;
-   private String nameOfProduct;
+    private String nameOfProduct;
 
     public ProductOrder(int numberOfOrder, String nameOfProduct) {
         this.numberOfOrder = numberOfOrder;
