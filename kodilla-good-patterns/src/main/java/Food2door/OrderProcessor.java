@@ -1,9 +1,11 @@
 package Food2door;
 
-public class Order {
+import java.util.List;
 
-    public void orderPocess(Provider provider, Item item) {
-        boolean ordered = provider.process(item);
+public class OrderProcessor {
+
+    public void orderPocess(Provider provider, List<Item> itemList) {
+        boolean ordered = provider.process(itemList);
         if (ordered) {
             System.out.println(" Your order is created.");
         } else {

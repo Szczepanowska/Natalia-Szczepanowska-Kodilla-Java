@@ -1,5 +1,8 @@
 package Food2door;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Application {
     public static void main(String[] args) {
 
@@ -13,11 +16,15 @@ public class Application {
         Item item3 = new Item(product3, 5);
         Item item4 = new Item(product4, 155);
 
-        Order order = new Order();
-        order.orderPocess(new ExtraFoodShop(), item1);
-        order.orderPocess(new ExtraFoodShop(), item2);
-        order.orderPocess(new GlutenFreeShop(), item3);
-        order.orderPocess(new HealthyShop(), item4);
+        List<Item> itemsList1 = new ArrayList<>();
+        itemsList1.add(item1);
+        itemsList1.add(item2);
+        itemsList1.add(item4);
+
+        OrderProcessor orderProcessor = new OrderProcessor();
+        orderProcessor.orderPocess(new ExtraFoodShop(), itemsList1);
+
+
 
 
     }
