@@ -1,27 +1,27 @@
 package Flights;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class FlightScanner {
-    public void findFilght(Flight flight){
 
-        Map<Flight> flights = new HashMap<>();
-        flights.put("MUC","LHR", "LAX");
-        airports.put("MUC", true);
-        airports.put("LHR", false);
-        airports.put("KBP", true);
-        airports.put("BUD", false);
+    public void findFlightFromAirport(String departureAirport, Map<Integer, Flight> mapOfAvailableFlights) {
+        System.out.println("Flights found from: " + departureAirport + " ");
+        mapOfAvailableFlights.entrySet().stream()
+                .filter(entry -> entry.getValue().getDepartureAirport().equals(departureAirport))
+                .forEach(System.out::println);
+    }
 
-        if (!airports.containsKey(flight.getArrivalAirport()) || !airports.containsKey(flight.getDepartureAirport()) || !airports.containsKey(flight.getLayoverAirport())) {
-            ;
-        } else {
-            if (airports.get(flight.getArrivalAirport()) && airports.get(flight.getDepartureAirport())) {
-                System.out.println("Flight available");
-            } else {
-                System.out.println("Flight unavailable");
-            }
-        }
+    public void findFlightToAirport(String arrivalAirport, Map<Integer, Flight> mapOfAvailableFlights) {
+        System.out.println("Flights found to: " + arrivalAirport + " ");
+        mapOfAvailableFlights.entrySet().stream()
+                .filter(entry -> entry.getValue().getDepartureAirport().equals(arrivalAirport))
+                .forEach(System.out::println);
+    }
 
+    public void findFlightWithLayover(Flight flight, Map<Integer, Flight> mapOfAvailableFlights) {
+        System.out.println("Available flights from: " + flight.getDepartureAirport() + " through " + flight.getLayoverAirport() + " to: " + flight.getArrivalAirport() + " ");
+        mapOfAvailableFlights.entrySet().stream()
+                .filter(entry -> (entry.getValue().equals(flight)))
+                .forEach(System.out::println);
     }
 }
