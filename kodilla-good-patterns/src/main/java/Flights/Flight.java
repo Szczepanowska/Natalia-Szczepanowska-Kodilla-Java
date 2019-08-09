@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class Flight {
     private String departureAirport;
-    private Optional <String> layoverAirport;
+    private Optional<String> layoverAirport;
     private String arrivalAirport;
 
     public Flight(String departureAirport, Optional<String> layoverAirport, String arrivalAirport) {
