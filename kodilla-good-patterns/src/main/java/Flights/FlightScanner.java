@@ -1,6 +1,7 @@
 package Flights;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FlightScanner {
 
@@ -9,24 +10,33 @@ public class FlightScanner {
         this.listOfAvailableFlights = listOfAvailableFlights;
     }
 
-    public void findFlighFromAirport(String departureAirport, List<Flight> listOfAvailableFlights) {
+    public void findFlighFromAirport(String departureAirport) {
         System.out.println("Flights found from: " + departureAirport + " ");
        listOfAvailableFlights.stream()
                 .filter(entry -> entry.getDepartureAirport().equals(departureAirport))
                 .forEach(System.out::println);
     }
 
-    public void findFlightToAirport(String arrivalAirport, List<Flight> listOfAvailableFlights) {
+    public void findFlightToAirport(String arrivalAirport) {
         System.out.println("Flights found to: " + arrivalAirport + " ");
         listOfAvailableFlights.stream()
                 .filter(entry -> entry.getDepartureAirport().equals(arrivalAirport))
                 .forEach(System.out::println);
     }
 
-    public void findFlightWithLayover(Flight flight, List<Flight> listOfAvailableFlights) {
-        System.out.println("Available flights from: " + flight.getDepartureAirport() + " to: " + flight.getArrivalAirport() + " ");
+    public void findFlightWithLayover(String departureAirport, String arrivalAirport) {
         listOfAvailableFlights.stream()
-                .filter(entry -> (entry.equals(flight)))
-                .forEach(System.out::println);
+                .filter(entry -> entry.getDepartureAirport().equals(departureAirport))
+                .filter(entry -> entry.getArrivalAirport().equals(arrivalAirport))
+                .collect(Collectors.toList());
+
+        for (String departureAirport: listOfAvailableFlights){
+            
+
+        }
+
+
+
+
     }
 }
