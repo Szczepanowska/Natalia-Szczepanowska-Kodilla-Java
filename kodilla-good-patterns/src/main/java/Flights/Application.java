@@ -1,24 +1,22 @@
 package Flights;
 
-import java.util.Map;
-import java.util.Optional;
+import java.util.List;
 
-import static Flights.MapOfAvailableFlights.getMapOfAvailableFlights;
+import static Flights.ListOfAvailableFlights.getListOfAvailableFlights;
 
 public class Application {
     public static void main(String args[]) {
 
         String departureAirport = "POZ";
-        Optional<String> intermediateAirport = Optional.ofNullable("WAW");
         String arrivalAirport = "KRK";
 
-        Flight flight = new Flight(departureAirport, intermediateAirport, arrivalAirport);
-        FlightScanner flightScanner = new FlightScanner();
+        Flight flight = new Flight(departureAirport, arrivalAirport);
+        FlightScanner flightScanner = new FlightScanner(getListOfAvailableFlights());
 
-        Map<Integer, Flight> mapOfAvailableFlights = getMapOfAvailableFlights();
+        List<Flight> listOfAvailableFlights = getListOfAvailableFlights();
 
-        flightScanner.findFlightWithLayover(flight, mapOfAvailableFlights);
-        flightScanner.findFlightFromAirport(departureAirport, mapOfAvailableFlights);
-        flightScanner.findFlightToAirport(arrivalAirport, mapOfAvailableFlights);
+        flightScanner.findFlightWithLayover(flight, listOfAvailableFlights);
+        flightScanner.findFlighFromAirport(departureAirport, listOfAvailableFlights);
+        flightScanner.findFlightToAirport(arrivalAirport, listOfAvailableFlights);
     }
 }

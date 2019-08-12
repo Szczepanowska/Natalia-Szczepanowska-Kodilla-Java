@@ -1,27 +1,32 @@
 package Flights;
 
-import java.util.Map;
+import java.util.List;
 
 public class FlightScanner {
 
-    public void findFlightFromAirport(String departureAirport, Map<Integer, Flight> mapOfAvailableFlights) {
+    private List<Flight> listOfAvailableFlights;
+    public FlightScanner(List<Flight> listOfAvailableFlights) {
+        this.listOfAvailableFlights = listOfAvailableFlights;
+    }
+
+    public void findFlighFromAirport(String departureAirport, List<Flight> listOfAvailableFlights) {
         System.out.println("Flights found from: " + departureAirport + " ");
-        mapOfAvailableFlights.entrySet().stream()
-                .filter(entry -> entry.getValue().getDepartureAirport().equals(departureAirport))
+       listOfAvailableFlights.stream()
+                .filter(entry -> entry.getDepartureAirport().equals(departureAirport))
                 .forEach(System.out::println);
     }
 
-    public void findFlightToAirport(String arrivalAirport, Map<Integer, Flight> mapOfAvailableFlights) {
+    public void findFlightToAirport(String arrivalAirport, List<Flight> listOfAvailableFlights) {
         System.out.println("Flights found to: " + arrivalAirport + " ");
-        mapOfAvailableFlights.entrySet().stream()
-                .filter(entry -> entry.getValue().getDepartureAirport().equals(arrivalAirport))
+        listOfAvailableFlights.stream()
+                .filter(entry -> entry.getDepartureAirport().equals(arrivalAirport))
                 .forEach(System.out::println);
     }
 
-    public void findFlightWithLayover(Flight flight, Map<Integer, Flight> mapOfAvailableFlights) {
-        System.out.println("Available flights from: " + flight.getDepartureAirport() + " through " + flight.getLayoverAirport() + " to: " + flight.getArrivalAirport() + " ");
-        mapOfAvailableFlights.entrySet().stream()
-                .filter(entry -> (entry.getValue().equals(flight)))
+    public void findFlightWithLayover(Flight flight, List<Flight> listOfAvailableFlights) {
+        System.out.println("Available flights from: " + flight.getDepartureAirport() + " to: " + flight.getArrivalAirport() + " ");
+        listOfAvailableFlights.stream()
+                .filter(entry -> (entry.equals(flight)))
                 .forEach(System.out::println);
     }
 }
