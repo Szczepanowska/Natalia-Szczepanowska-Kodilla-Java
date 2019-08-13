@@ -1,16 +1,18 @@
 package Flights;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Set;
+
 
 public class FlightScanner {
 
     private List<Flight> listOfAvailableFlights;
-    public FlightScanner(List<Flight> listOfAvailableFlights) {
-        this.listOfAvailableFlights = listOfAvailableFlights;
+    public FlightScanner(List<Flight> listOfAvailableFlights) { this.listOfAvailableFlights = listOfAvailableFlights;
     }
 
-    public void findFlighFromAirport(String departureAirport) {
+    public void findFlightFromAirport(String departureAirport) {
         System.out.println("Flights found from: " + departureAirport + " ");
        listOfAvailableFlights.stream()
                 .filter(entry -> entry.getDepartureAirport().equals(departureAirport))
@@ -25,18 +27,26 @@ public class FlightScanner {
     }
 
     public void findFlightWithLayover(String departureAirport, String arrivalAirport) {
-        listOfAvailableFlights.stream()
-                .filter(entry -> entry.getDepartureAirport().equals(departureAirport))
-                .filter(entry -> entry.getArrivalAirport().equals(arrivalAirport))
-                .collect(Collectors.toList());
+        Set<List<Flight>> resultFlights = new HashSet<>();
 
-        for (String departureAirport: listOfAvailableFlights){
-            
+        List<Flight> arrivalFlights = listOfAvailableFlights.stream()
+                .flatMap(flight -> flight.getDepartureAirport().stream())
+               .
+
+
+
+
+
+        if(listOfAvailableFlights.contains(departureAirport)) {
+            resultFlights.add(departureFlights);
+
+        }
+
 
         }
 
 
 
 
-    }
-}
+
+
