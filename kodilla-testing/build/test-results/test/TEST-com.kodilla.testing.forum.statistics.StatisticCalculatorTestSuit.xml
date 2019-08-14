@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-07-17T07:38:12" hostname="Natalia" time="0.431">
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-08-14T10:46:38" hostname="Natalia" time="0.451">
   <properties/>
-  <testcase name="calculateAdvStatisticsMorePostsThanComments" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.408"/>
-  <testcase name="calculateAdvStatisticsThousandPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.003"/>
-  <testcase name="calculateAdvStatisticsZeroPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.005"/>
-  <testcase name="calculateAdvStatisticsMoreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.005"/>
-  <testcase name="calculateAdvStatisticsHundredUsers" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.005"/>
+  <testcase name="calculateAdvStatisticsMorePostsThanComments" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.437"/>
+  <testcase name="calculateAdvStatisticsThousandPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.004"/>
+  <testcase name="calculateAdvStatisticsZeroPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.002"/>
+  <testcase name="calculateAdvStatisticsMoreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.003"/>
+  <testcase name="calculateAdvStatisticsHundredUsers" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.003"/>
   <system-out><![CDATA[Number of users is: 100
 Number of posts is: 1000
 Number of comments is: 10
