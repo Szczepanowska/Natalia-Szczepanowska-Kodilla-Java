@@ -25,7 +25,5 @@ public class Application {
         orderProcessor.orderPocess(new ExtraFoodShop(), itemsList1);
 
 
-
-
     }
 }

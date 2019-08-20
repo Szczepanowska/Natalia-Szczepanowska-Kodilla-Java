@@ -4,20 +4,25 @@ public class Book {
     String title;
     String author;
     int publicationYear;
+
     public Book(String title, String author, int publicationYear) {
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;
     }
+
     public String getTitle() {
         return title;
     }
+
     public String getAuthor() {
         return author;
     }
+
     public int getPublicationYear() {
         return publicationYear;
     }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -26,6 +31,7 @@ public class Book {
                 ", publicationYear=" + publicationYear +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -35,6 +41,7 @@ public class Book {
         if (getTitle() != null ? !getTitle().equals(book.getTitle()) : book.getTitle() != null) return false;
         return getAuthor() != null ? getAuthor().equals(book.getAuthor()) : book.getAuthor() == null;
     }
+
     @Override
     public int hashCode() {
         int result = getTitle() != null ? getTitle().hashCode() : 0;

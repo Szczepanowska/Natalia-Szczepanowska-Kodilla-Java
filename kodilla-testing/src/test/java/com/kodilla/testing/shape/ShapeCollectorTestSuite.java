@@ -8,21 +8,20 @@ import java.util.List;
 public class ShapeCollectorTestSuite {
 
 
-
     @Test
-    public void testAddFigure(){
+    public void testAddFigure() {
 
-         Shape s1 = new Circle("o", 2.0);
+        Shape s1 = new Circle("o", 2.0);
 
-         ShapeCollector collector = new ShapeCollector();
+        ShapeCollector collector = new ShapeCollector();
 
-         collector.addFigure(s1);
+        collector.addFigure(s1);
 
         Assert.assertEquals(s1, collector.getFigure(0));
     }
 
     @Test
-    public void testRemoveFigure(){
+    public void testRemoveFigure() {
 
         Shape s1 = new Circle("o", 2.0);
 
@@ -35,11 +34,10 @@ public class ShapeCollectorTestSuite {
         Assert.assertEquals(0, collector.showFigures().size());
 
 
-
     }
 
     @Test
-    public void testGetFigure(){
+    public void testGetFigure() {
 
         Shape s1 = new Circle("o", 2.0);
 
@@ -53,14 +51,14 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void showFigures(){
+    public void showFigures() {
 
         Shape s1 = new Circle("o", 2.0);
         Shape s2 = new Triangle("t", 5.5, 5.5);
 
         ShapeCollector collector = new ShapeCollector();
         collector.addFigure(s1);
-       collector.addFigure(s2);
+        collector.addFigure(s2);
         List<Shape> result = collector.showFigures();
 
         Assert.assertEquals(result.size(), 2);

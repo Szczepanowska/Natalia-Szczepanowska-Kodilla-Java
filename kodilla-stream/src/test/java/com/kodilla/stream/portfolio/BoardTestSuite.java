@@ -118,6 +118,7 @@ public class BoardTestSuite {
         Assert.assertEquals(1, tasks.size());
         Assert.assertEquals("HQLs for analysis", tasks.get(0).getTitle());
     }
+
     @Test
     public void testAddTaskListFindLongTasks() {
         //Given
@@ -138,7 +139,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddTaskListAverageWorkingOnTask(){
+    public void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
         //When
@@ -154,7 +155,7 @@ public class BoardTestSuite {
                 .flatMap(tl -> tl.getTasks().stream())
                 .count();
 
-        double result = daysAmount/taskAmount;
+        double result = daysAmount / taskAmount;
 
         //Then
         Assert.assertEquals(10, result, 0);

@@ -11,10 +11,10 @@ public class FileReader {
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource("file/names.txt").getFile());
 
-        try ( Stream<String> fileLines = Files.lines(Paths.get(file.getPath()))){
+        try (Stream<String> fileLines = Files.lines(Paths.get(file.getPath()))) {
             fileLines.forEach(System.out::println);
         } catch (IOException e) {
-        throw new FileReaderException();
+            throw new FileReaderException();
         } finally {
             System.out.println("I'm gonna be there always");
         }

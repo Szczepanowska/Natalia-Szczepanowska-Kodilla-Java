@@ -6,7 +6,7 @@ public class Triangle implements Shape {
     private Double a;
     private Double h;
 
-    public Triangle (String name, Double a, Double h){
+    public Triangle(String name, Double a, Double h) {
         this.name = name;
         this.a = a;
         this.h = h;
@@ -18,6 +18,6 @@ public class Triangle implements Shape {
     }
 
     public Double getField() {
-        return (a*h)/2;
+        return (a * h) / 2;
     }
 }

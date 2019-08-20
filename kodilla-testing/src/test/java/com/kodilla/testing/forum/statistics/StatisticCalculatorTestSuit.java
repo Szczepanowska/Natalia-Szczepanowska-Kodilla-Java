@@ -1,7 +1,10 @@
 package com.kodilla.testing.forum.statistics;
+
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.util.ArrayList;
+
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -21,6 +24,7 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(0, calculator.getAverageNumberOfCommentsPerPost(), 0);
         Assert.assertEquals(0, calculator.getAverageNumberOfCommntsPerUser(), 0);
     }
+
     @Test
     public void calculateAdvStatisticsHundredUsers() {
         Statistics statisticsMock = mock(Statistics.class);
@@ -39,6 +43,7 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(0, calculator.getAverageNumberOfCommentsPerPost(), 0);
         Assert.assertEquals(0, calculator.getAverageNumberOfCommntsPerUser(), 0);
     }
+
     @Test
     public void calculateAdvStatisticsThousandPosts() {
         Statistics statisticsMock = mock(Statistics.class);
@@ -58,6 +63,7 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(0, calculator.getAverageNumberOfCommentsPerPost(), 0);
         Assert.assertEquals(0, calculator.getAverageNumberOfCommntsPerUser(), 0);
     }
+
     @Test
     public void calculateAdvStatisticsMorePostsThanComments() {
         Statistics statisticsMock = mock(Statistics.class);
@@ -78,6 +84,7 @@ public class StatisticCalculatorTestSuit {
         Assert.assertEquals(0.01, calculator.getAverageNumberOfCommentsPerPost(), 0);
         Assert.assertEquals(0.1, calculator.getAverageNumberOfCommntsPerUser(), 0);
     }
+
     @Test
     public void calculateAdvStatisticsMoreCommentsThanPosts() {
         Statistics statisticsMock = mock(Statistics.class);

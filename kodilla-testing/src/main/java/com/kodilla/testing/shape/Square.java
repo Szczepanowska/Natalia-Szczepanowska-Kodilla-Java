@@ -6,7 +6,7 @@ public class Square implements Shape {
     private String name;
     private Double a;
 
-    public Square (String name, Double a){
+    public Square(String name, Double a) {
         this.name = name;
         this.a = a;
     }
@@ -18,6 +18,6 @@ public class Square implements Shape {
 
     @Override
     public Double getField() {
-        return a*a;
+        return a * a;
     }
 }

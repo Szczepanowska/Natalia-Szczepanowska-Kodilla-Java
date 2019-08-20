@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-08-16T07:40:36" hostname="Natalia" time="0.577">
-  <properties/>
-  <testcase name="calculateAdvStatisticsMorePostsThanComments" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.546"/>
-  <testcase name="calculateAdvStatisticsThousandPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.005"/>
-  <testcase name="calculateAdvStatisticsZeroPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.006"/>
-  <testcase name="calculateAdvStatisticsMoreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.011"/>
-  <testcase name="calculateAdvStatisticsHundredUsers" classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.006"/>
-  <system-out><![CDATA[Number of users is: 100
+<testsuite name="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" tests="5" skipped="0" failures="0"
+           errors="0" timestamp="2019-08-16T07:40:36" hostname="Natalia" time="0.577">
+    <properties/>
+    <testcase name="calculateAdvStatisticsMorePostsThanComments"
+              classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.546"/>
+    <testcase name="calculateAdvStatisticsThousandPosts"
+              classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.005"/>
+    <testcase name="calculateAdvStatisticsZeroPosts"
+              classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.006"/>
+    <testcase name="calculateAdvStatisticsMoreCommentsThanPosts"
+              classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.011"/>
+    <testcase name="calculateAdvStatisticsHundredUsers"
+              classname="com.kodilla.testing.forum.statistics.StatisticCalculatorTestSuit" time="0.006"/>
+    <system-out><![CDATA[Number of users is: 100
 Number of posts is: 1000
 Number of comments is: 10
 Average number of posts per user is: 10.0
@@ -37,5 +43,5 @@ Average number of posts per user is: 0.0
 Average number of comments per user is: 0.0
 Average number of comments per post is: 0.0
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -12,13 +12,15 @@ public class CollectionTestSuite {
 
 
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test: begin");
     }
+
     @After
-    public void after(){
+    public void after() {
         System.out.println("Test: end");
     }
+
     @Test
     public void testOddNumbersExterminatorNormalList() {
         List<Integer> data = new ArrayList<>();

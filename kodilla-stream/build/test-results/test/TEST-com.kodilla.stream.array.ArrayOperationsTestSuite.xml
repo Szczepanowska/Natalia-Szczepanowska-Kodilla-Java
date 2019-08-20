@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-16T07:40:30" hostname="Natalia" time="0.081">
-  <properties/>
-  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.081"/>
-  <system-out><![CDATA[number: 1
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0"
+           timestamp="2019-08-16T07:40:30" hostname="Natalia" time="0.081">
+    <properties/>
+    <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.081"/>
+    <system-out><![CDATA[number: 1
 number: 1
 number: 1
 number: 1
@@ -24,5 +25,5 @@ number: 11
 number: 11
 Result equals: 6.0
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

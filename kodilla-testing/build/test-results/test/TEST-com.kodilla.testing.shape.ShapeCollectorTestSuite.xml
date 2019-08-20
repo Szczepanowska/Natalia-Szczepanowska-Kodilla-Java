@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-08-16T07:40:37" hostname="Natalia" time="0.013">
-  <properties/>
-  <testcase name="showFigures" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.007"/>
-  <testcase name="testRemoveFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
-  <testcase name="testAddFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
-  <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="4" skipped="0" failures="0" errors="0"
+           timestamp="2019-08-16T07:40:37" hostname="Natalia" time="0.013">
+    <properties/>
+    <testcase name="showFigures" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.007"/>
+    <testcase name="testRemoveFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+    <testcase name="testAddFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
+    <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+    <system-out><![CDATA[]]></system-out>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>
