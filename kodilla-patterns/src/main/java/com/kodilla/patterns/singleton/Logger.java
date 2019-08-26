@@ -2,15 +2,12 @@ package com.kodilla.patterns.singleton;
 
 public class Logger {
     private String lastLog = "";
-    private static Logger loggerInstance = null;
+    private static Logger loggerInstance = new Logger();
 
     private Logger(){
     }
 
     public static Logger getInstance(){
-        if (loggerInstance == null) {
-            loggerInstance = new Logger();
-        }
         return loggerInstance;
     }
 
