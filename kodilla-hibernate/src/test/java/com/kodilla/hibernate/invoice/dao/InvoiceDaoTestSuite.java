@@ -16,10 +16,18 @@ import java.math.BigDecimal;
 @SpringBootTest
 public class InvoiceDaoTestSuite {
 
-    @Autowired InvoiceDao invoiceDao;
+    @Autowired
+    InvoiceDao invoiceDao;
+
+    @Autowired
+    ProductDao productDao;
+
+    @Autowired
+    ItemDao itemDao;
+
 
     @Test
-    public void testInvoiceDaoSave(){
+    public void testInvoiceDaoSave() {
         //Given
         Product product = new Product("printer");
 
@@ -27,6 +35,8 @@ public class InvoiceDaoTestSuite {
         Item item2 = new Item(new BigDecimal(1000), 50, new BigDecimal(50000));
 
         Invoice invoice = new Invoice("7");
+        invoice.getItems().add(item);
+
         product.getItems().add(item);
         product.getItems().add(item2);
         item.setProduct(product);
@@ -36,13 +46,22 @@ public class InvoiceDaoTestSuite {
 
         //When
         invoiceDao.save(invoice);
-        int id = invoice.getId();
+        int invoiceId = invoice.getId();
+        productDao.save(product);
+        int productId = product.getId();
+        itemDao.save(item);
+        int itemId = item.getId();
+
 
         //Then
-        Assert.assertNotEquals(0, id);
+        Assert.assertNotEquals(0, invoiceId);
+        Assert.assertNotEquals(0, productId);
+        Assert.assertNotEquals(0, itemId);
 
         //CleanUp
-        invoiceDao.deleteById(id);
+        invoiceDao.deleteById(invoiceId);
+        invoiceDao.deleteById(productId);
+        invoiceDao.deleteById(itemId);
 
     }
 }
