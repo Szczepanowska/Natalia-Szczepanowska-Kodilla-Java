@@ -47,9 +47,7 @@ public class InvoiceDaoTestSuite {
         //When
         invoiceDao.save(invoice);
         int invoiceId = invoice.getId();
-        productDao.save(product);
         int productId = product.getId();
-        itemDao.save(item);
         int itemId = item.getId();
 
 
@@ -60,8 +58,6 @@ public class InvoiceDaoTestSuite {
 
         //CleanUp
         invoiceDao.deleteById(invoiceId);
-        invoiceDao.deleteById(productId);
-        invoiceDao.deleteById(itemId);
 
     }
 }
