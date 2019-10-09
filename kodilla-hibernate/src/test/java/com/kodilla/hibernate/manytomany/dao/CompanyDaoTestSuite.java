@@ -78,10 +78,10 @@ public class CompanyDaoTestSuite {
         //When
         employeeDao.save(johnSmith);
         int johnSmithId = johnSmith.getId();
-        List<Employee> employeeByLastname = employeeDao.retrieveEmployeesGivenLastname("Smith");
+        List<Employee> employeesGivenLastname = employeeDao.retrieveEmployeesGivenLastname("Smith");
 
         //Then
-        Assert.assertEquals(1, employeeByLastname.size());
+        Assert.assertEquals(1, employeesGivenLastname.size());
 
         //CleanUp
         employeeDao.deleteById(johnSmithId);
