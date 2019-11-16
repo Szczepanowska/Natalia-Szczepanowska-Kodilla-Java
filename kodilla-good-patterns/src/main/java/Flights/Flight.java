@@ -38,4 +38,8 @@ public class Flight {
         return result;
     }
 
+@Override
+public String toString(){
+        return departureAirport + " " + arrivalAirport;
 }
+    }

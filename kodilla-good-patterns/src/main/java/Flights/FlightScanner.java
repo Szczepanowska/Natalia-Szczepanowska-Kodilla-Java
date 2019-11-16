@@ -31,17 +31,22 @@ public class FlightScanner {
 
     public void findFlightWithLayover(String departureAirport, String arrivalAirport) {
         Set<List<Flight>> resultFlights = new HashSet<>();
-        List<Flight> departureFlights = listOfAvailableFlights.stream()
-                .filter(entry -> entry.getDepartureAirport().equals(departureAirport))
-                .collect(Collectors.toList());
+
         List<Flight> arrivalFlights = listOfAvailableFlights.stream()
                 .filter(entry -> entry.getArrivalAirport().equals(arrivalAirport))
                 .collect(Collectors.toList());
+        List<Flight> departureFlights = listOfAvailableFlights.stream()
+    .filter(entry -> entry.getDepartureAirport().equals(departureAirport))
+         .collect(Collectors.toList());
 
+        System.out.println("arrival flights ");
 
-        //departureFlights.stream()
-        //   .filter(entry -> entry.getArrivalAirport().equals(departureAirport))
-        //  .collect(Collectors.toList());
+        arrivalFlights.stream().forEach(f -> System.out.println(f.getDepartureAirport() + " " + f.getArrivalAirport()));
+
+System.out.println("departure flights ");
+
+        departureFlights.stream().forEach(f -> System.out.println(f.getDepartureAirport() + " " + f.getArrivalAirport()));
+
 
         for (Flight flightD : departureFlights) {
             for (Flight flightA : arrivalFlights) {
@@ -53,6 +58,11 @@ public class FlightScanner {
 
                 }
             }
+        }
+        System.out.println("layover flights");
+        for (List<Flight> flights : resultFlights){
+            System.out.println("new connection: " + flights.get(0) +" " + flights.get(1));
+
         }
 
 

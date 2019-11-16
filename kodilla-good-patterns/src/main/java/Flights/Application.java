@@ -13,7 +13,7 @@ public class Application {
 
 
         flightScanner.findFlightWithLayover(departureAirport, arrivalAirport);
-        flightScanner.findFlightFromAirport(departureAirport);
-        flightScanner.findFlightToAirport(arrivalAirport);
+        //flightScanner.findFlightFromAirport(departureAirport);
+        //flightScanner.findFlightToAirport(arrivalAirport);
     }
 }
